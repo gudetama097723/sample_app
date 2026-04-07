@@ -1,0 +1,363 @@
+Started GET "/" for 127.0.0.1 at 2026-04-07 07:39:49 +0000
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='SampleApp'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-04-07 07:55:19.944379', '2026-04-07 07:55:19.944383') RETURNING "key" /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Migrating to CreateLists (20260407074951)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='SampleApp'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260407074951') RETURNING "version" /*application='SampleApp'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-04-07 08:02:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/homes/top" for 127.0.0.1 at 2026-04-07 08:02:45 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 15.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2026-04-07 08:03:32 +0000
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-04-07 08:03:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/top" for 127.0.0.1 at 2026-04-07 08:04:12 +0000
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 4.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-07 08:11:41 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:11:49 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 14.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-07 08:14:50 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:16:17 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 14.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-07 08:50:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:50:38 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>新規投稿#new</h1>
+<%= from_with model: List.new do |f| %>
+  <h4>タイトル<h4>
+  <%= f.text_field :title %>
+
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "投稿" %>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>新規投稿#new</h1>
+<%= from_with model: List.new do |f| %>
+  <h4>タイトル<h4>
+  <%= f.text_field :title %>
+
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "投稿" %>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+):
+1:    <h1>新規投稿#new</h1>
+2:    <%= from_with model: List.new do |f| %>
+3:      <h4>タイトル<h4>
+4:      <%= f.text_field :title %>
+5:    
+6:      <h4>本文</h4>
+7:      <%= f.text_area :body %>
+8:    
+9:      <%= f.submit "投稿" %>
+10:    <p>Find me in app/views/lists/new.html.erb</p>
+  
+app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+):
+  
+app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:50:41 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>新規投稿#new</h1>
+<%= from_with model: List.new do |f| %>
+  <h4>タイトル<h4>
+  <%= f.text_field :title %>
+
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "投稿" %>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>新規投稿#new</h1>
+<%= from_with model: List.new do |f| %>
+  <h4>タイトル<h4>
+  <%= f.text_field :title %>
+
+  <h4>本文</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit "投稿" %>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+):
+1:    <h1>新規投稿#new</h1>
+2:    <%= from_with model: List.new do |f| %>
+3:      <h4>タイトル<h4>
+4:      <%= f.text_field :title %>
+5:    
+6:      <h4>本文</h4>
+7:      <%= f.text_area :body %>
+8:    
+9:      <%= f.submit "投稿" %>
+10:    <p>Find me in app/views/lists/new.html.erb</p>
+  
+app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+          end
+             ^
+):
+  
+app/views/lists/new.html.erb:13: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:51:22 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 20.9ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 1.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `from_with' for an instance of #<Class:0x0000759ddcf51a50>)
+Caused by: NoMethodError (undefined method `from_with' for an instance of #<Class:0x0000759ddcf51a50>)
+
+Information for: ActionView::Template::Error (undefined method `from_with' for an instance of #<Class:0x0000759ddcf51a50>):
+    1: <h1>新規投稿#new</h1>
+    2: <%= from_with model: List.new do |f| %>
+    3:   <h4>タイトル<h4>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/lists/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `from_with' for an instance of #<Class:0x0000759ddcf51a50>):
+  
+app/views/lists/new.html.erb:2
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 08:54:41 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | GC: 0.0ms)
+Completed 200 OK in 28ms (Views: 17.6ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-07 08:59:59 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 09:00:17 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.6ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `new' for an instance of List)
+Caused by: NoMethodError (undefined method `new' for an instance of List)
+
+Information for: ActionView::Template::Error (undefined method `new' for an instance of List):
+    1: <h1>新規投稿#new</h1>
+    2: <%= form_with model: @list.new do |f| %>
+    3:   <h4>タイトル</h4>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/lists/new.html.erb:2
+
+Information for cause: NoMethodError (undefined method `new' for an instance of List):
+  
+app/views/lists/new.html.erb:2
+Started GET "/favicon.ico" for 127.0.0.1 at 2026-04-07 09:00:17 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 09:00:35 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | GC: 6.7ms)
+Completed 200 OK in 32ms (Views: 17.7ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 6.7ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 09:00:55 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.0ms)
+Completed 200 OK in 19ms (Views: 4.9ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2026-04-07 09:16:40 +0000
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1", "body"=>"test1"}, "commit"=>"投稿する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Create (2.4ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES ('test1', 'test1', '2026-04-07 09:16:40.073938', '2026-04-07 09:16:40.073938') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/top
+Completed 302 Found in 23ms (ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2026-04-07 09:16:40 +0000
+Processing by HomesController#top as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-07 09:22:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-07 09:22:39 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 7.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 16.6ms | ActiveRecord: 1.7ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2026-04-07 09:22:48 +0000
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1", "body"=>"test1"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Create (1.5ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES ('test1', 'test1', '2026-04-07 09:22:48.253904', '2026-04-07 09:22:48.253904') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:3000/top
+Completed 302 Found in 18ms (ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/top" for 127.0.0.1 at 2026-04-07 09:22:48 +0000
+Processing by HomesController#top as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 2.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
