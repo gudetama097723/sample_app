@@ -1422,3 +1422,193 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2026-04-08 07:33:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 6.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 07:33:25 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:11
+  Rendered lists/index.html.erb within layouts/application (Duration: 73.2ms | GC: 20.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | GC: 20.6ms)
+Completed 200 OK in 135ms (Views: 85.2ms | ActiveRecord: 3.3ms (6 queries, 0 cached) | GC: 20.6ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 07:33:25 +0000
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='redirect'*/[0m
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: eg8iirw5k6d2yjwjrhjplccyky1b (http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzozODoyNS40NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--8883f291f6556521720d9a591532368e17d8bd27/142_refileDownloadImage.png)[0m
+Redirected to http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzozODoyNS40NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--8883f291f6556521720d9a591532368e17d8bd27/142_refileDownloadImage.png
+Completed 302 Found in 14ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzozODoyNS40NTNaIiwicHVyIjoiYmxvYl9rZXkifX0=--8883f291f6556521720d9a591532368e17d8bd27/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 07:33:25 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 07:33:39 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  Rendered lists/show.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 0.3ms)
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 07:34:11 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  Rendered lists/show.html.erb within layouts/application (Duration: 8.0ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 1.2ms)
+Completed 200 OK in 47ms (Views: 12.5ms | ActiveRecord: 1.6ms (2 queries, 0 cached) | GC: 18.2ms)
+
+
+Started DELETE "/lists/id.1?_method=delete" for 127.0.0.1 at 2026-04-08 07:34:45 +0000
+Processing by ListsController#destroy as */*
+Completed 404 Not Found in 10ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List without an ID):
+  
+app/controllers/lists_controller.rb:31:in `destroy'
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 07:34:46 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  Rendered lists/show.html.erb within layouts/application (Duration: 2.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 0.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 07:35:06 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  Rendered lists/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.3ms | ActiveRecord: 0.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/lists/id.1?_method=delete" for 127.0.0.1 at 2026-04-08 07:38:37 +0000
+Processing by ListsController#destroy as */*
+  Parameters: {"id"=>"id"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = NULL LIMIT 1 /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:31:in `destroy'
+Completed 404 Not Found in 16ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'="id"):
+  
+app/controllers/lists_controller.rb:31:in `destroy'
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 07:38:37 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  Rendered lists/show.html.erb within layouts/application (Duration: 8.0ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 1.2ms)
+Completed 200 OK in 25ms (Views: 12.0ms | ActiveRecord: 0.7ms (2 queries, 0 cached) | GC: 1.2ms)
+
+
+Started DELETE "/lists/1?_method=delete" for 127.0.0.1 at 2026-04-08 07:41:07 +0000
+Processing by ListsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:32:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:32:in `destroy'
+  [1m[36mList Destroy (0.1ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = 1 /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='destroy',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:32:in `destroy'
+Redirected to http://127.0.0.1:8080/lists
+Completed 302 Found in 20ms (ActiveRecord: 5.1ms (3 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 07:41:07 +0000
+Processing by ListsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:11
+  Rendered lists/index.html.erb within layouts/application (Duration: 75.0ms | GC: 43.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 77.1ms | GC: 44.0ms)
+Completed 200 OK in 88ms (Views: 75.7ms | ActiveRecord: 1.9ms (5 queries, 0 cached) | GC: 45.1ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 07:41:07 +0000
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='redirect'*/[0m
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: eg8iirw5k6d2yjwjrhjplccyky1b (http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzo0NjowNy45MjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--8aea1e014ddeceba9356129a1452bd591191eb6d/142_refileDownloadImage.png)[0m
+Redirected to http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzo0NjowNy45MjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--8aea1e014ddeceba9356129a1452bd591191eb6d/142_refileDownloadImage.png
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNzo0NjowNy45MjhaIiwicHVyIjoiYmxvYl9rZXkifX0=--8aea1e014ddeceba9356129a1452bd591191eb6d/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 07:41:07 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/edit/2" for 127.0.0.1 at 2026-04-08 07:41:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/lists/edit/2"):
+  
