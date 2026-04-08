@@ -437,3 +437,609 @@ Processing by ListsController#index as HTML
 Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 4.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2026-04-08 04:21:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 6.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-08 04:22:01 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 76.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 101.9ms | GC: 0.0ms)
+Completed 200 OK in 207ms (Views: 116.1ms | ActiveRecord: 4.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 04:22:05 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:22:15 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.9ms)
+Completed 200 OK in 33ms (Views: 3.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 17.5ms)
+
+
+Started GET "/lists/2" for 127.0.0.1 at 2026-04-08 04:22:22 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 2 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/lists/3" for 127.0.0.1 at 2026-04-08 04:22:27 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 3 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'="3"):
+  
+app/controllers/lists_controller.rb:17:in `show'
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:22:33 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 04:25:14 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | GC: 4.6ms)
+Completed 200 OK in 26ms (Views: 14.0ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 4.6ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:25:16 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 1.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:25:17 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.5ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:25:20 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 04:25:21 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.4ms)
+Completed 200 OK in 16ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-08 04:25:55 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 04:34:45 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id}" %>
+  </span>
+
+  <% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...list.title, list_path{list.id}" ); @output_buffer.safe_appen...
+...                              ^
+/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:12: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id}" %>
+  </span>
+
+  <% end %>
+
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <% @lists.each do |list| %>
+4:    
+5:      <p>タイトル</p>
+6:      <span>
+7:        <%= link_to list.title, list_path{list.id}" %>
+8:      </span>
+9:    
+10:      <% end %>
+  
+app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/lists/index.html.erb:12: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...list.title, list_path{list.id}" ); @output_buffer.safe_appen...
+...                              ^
+/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:12: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/lists/index.html.erb:12: unterminated string meets end of file
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-08 04:34:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-08 04:34:53 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 1.0ms)
+Completed 200 OK in 19ms (Views: 5.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 127.0.0.1 at 2026-04-08 04:34:53 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started POST "/lists" for 127.0.0.1 at 2026-04-08 04:35:26 +0000
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"投稿すると", "body"=>"詳細ページへ移動します"}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Create (2.1ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES ('投稿すると', '詳細ページへ移動します', '2026-04-08 04:35:26.020416', '2026-04-08 04:35:26.020416') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/lists/3
+Completed 302 Found in 20ms (ActiveRecord: 5.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/3" for 127.0.0.1 at 2026-04-08 04:35:26 +0000
+Processing by ListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 3 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-08 04:51:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 5.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/list/1/edit" for 127.0.0.1 at 2026-04-08 04:52:19 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/list/1/edit"):
+  
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 04:52:29 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | GC: 0.2ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 1.9ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集画面</h1>
+
+<%= from_with model: @list do |f| $>
+
+  <h4>タイトル</h4>
+  <%= f.text_dield :title %>
+
+  <h4>本文</h4>
+  <%= f.text_arera :body %>
+  <%= f.submit "保存" %>
+<% end %>
+
+
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:5: syntax error, unexpected '<'
+  <h4>タイトル</h4>
+  ^
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:8: unknown regexp option - h
+  <h4>本文</h4>
+             ^~
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:15: syntax error, unexpected `END'
+...ut_buffer.safe_append='<!-- END app/views/lists/edit.html.er...
+...                            ^~~
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:16: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>編集画面</h1>
+
+<%= from_with model: @list do |f| $>
+
+  <h4>タイトル</h4>
+  <%= f.text_dield :title %>
+
+  <h4>本文</h4>
+  <%= f.text_arera :body %>
+  <%= f.submit "保存" %>
+<% end %>
+
+
+
+):
+1:    <h1>編集画面</h1>
+2:    
+3:    <%= from_with model: @list do |f| $>
+4:    
+5:      <h4>タイトル</h4>
+6:      <%= f.text_dield :title %>
+7:    
+8:      <h4>本文</h4>
+9:      <%= f.text_arera :body %>
+10:      <%= f.submit "保存" %>
+11:    <% end %>
+  
+app/views/lists/edit.html.erb:5: syntax error, unexpected '<'
+app/views/lists/edit.html.erb:8: unknown regexp option - h
+app/views/lists/edit.html.erb:15: syntax error, unexpected `END'
+app/views/lists/edit.html.erb:16: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:5: syntax error, unexpected '<'
+  <h4>タイトル</h4>
+  ^
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:8: unknown regexp option - h
+  <h4>本文</h4>
+             ^~
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:15: syntax error, unexpected `END'
+...ut_buffer.safe_append='<!-- END app/views/lists/edit.html.er...
+...                            ^~~
+/home/ubuntu/environment/sample_app/app/views/lists/edit.html.erb:16: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/lists/edit.html.erb:5: syntax error, unexpected '<'
+app/views/lists/edit.html.erb:8: unknown regexp option - h
+app/views/lists/edit.html.erb:15: syntax error, unexpected `END'
+app/views/lists/edit.html.erb:16: unterminated string meets end of file
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 04:53:57 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 0.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `from_with' for an instance of #<Class:0x00007dbf03eddcb8>)
+Caused by: NoMethodError (undefined method `from_with' for an instance of #<Class:0x00007dbf03eddcb8>)
+
+Information for: ActionView::Template::Error (undefined method `from_with' for an instance of #<Class:0x00007dbf03eddcb8>):
+    1: <h1>編集画面</h1>
+    2: 
+    3: <%= from_with model: @list do |f| %>
+    4: 
+    5:   <h4>タイトル</h4>
+    6:   <%= f.text_dield :title %>
+  
+app/views/lists/edit.html.erb:3
+
+Information for cause: NoMethodError (undefined method `from_with' for an instance of #<Class:0x00007dbf03eddcb8>):
+  
+app/views/lists/edit.html.erb:3
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 04:54:37 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_dield' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `text_dield' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `text_dield' for an instance of ActionView::Helpers::FormBuilder):
+    3: <%= form_with model: @list do |f| %>
+    4: 
+    5:   <h4>タイトル</h4>
+    6:   <%= f.text_dield :title %>
+    7: 
+    8:   <h4>本文</h4>
+    9:   <%= f.text_arera :body %>
+  
+app/views/lists/edit.html.erb:6
+app/views/lists/edit.html.erb:3
+
+Information for cause: NoMethodError (undefined method `text_dield' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/lists/edit.html.erb:6
+app/views/lists/edit.html.erb:3
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 04:55:10 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `text_arera' for an instance of ActionView::Helpers::FormBuilder)
+Caused by: NoMethodError (undefined method `text_arera' for an instance of ActionView::Helpers::FormBuilder)
+
+Information for: ActionView::Template::Error (undefined method `text_arera' for an instance of ActionView::Helpers::FormBuilder):
+     6:   <%= f.text_field :title %>
+     7: 
+     8:   <h4>本文</h4>
+     9:   <%= f.text_arera :body %>
+    10:   <%= f.submit "保存" %>
+    11: <% end %>
+  
+app/views/lists/edit.html.erb:9
+app/views/lists/edit.html.erb:3
+
+Information for cause: NoMethodError (undefined method `text_arera' for an instance of ActionView::Helpers::FormBuilder):
+  
+app/views/lists/edit.html.erb:9
+app/views/lists/edit.html.erb:3
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 04:55:25 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | GC: 4.0ms)
+Completed 200 OK in 33ms (Views: 17.2ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2026-04-08 05:51:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+  
+ArgumentError (Invalid route name: 'update_;list'):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2026-04-08 05:55:56 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2026-04-08 06:01:54 +0000
+  
+ArgumentError (Invalid route name: 'update_;list'):
+  
+config/routes.rb:8:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2026-04-08 06:03:51 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 2.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/list/1/edit" for 127.0.0.1 at 2026-04-08 06:04:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/list/1/edit"):
+  
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 06:04:40 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 3.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | GC: 0.8ms)
+Completed 200 OK in 75ms (Views: 18.5ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 3.2ms)
+
+
+Started PATCH "/lists/1" for 127.0.0.1 at 2026-04-08 06:05:10 +0000
+Processing by ListsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1　ですよ", "body"=>"test1　追記：編集機能を使いました"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='update',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+  [1m[36mList Update (1.3ms)[0m  [1m[33mUPDATE "lists" SET "title" = 'test1　ですよ', "body" = 'test1　追記：編集機能を使いました', "updated_at" = '2026-04-08 06:05:10.912495' WHERE "lists"."id" = 1 /*action='update',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:26:in `update'
+Redirected to http://127.0.0.1:8080/lists/1
+Completed 302 Found in 20ms (ActiveRecord: 4.6ms (2 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 06:05:10 +0000
+Processing by ListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 06:07:05 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `list' for an instance of #<Class:0x00007f7c6789c3b8>)
+Caused by: NameError (undefined local variable or method `list' for an instance of #<Class:0x00007f7c6789c3b8>)
+
+Information for: ActionView::Template::Error (undefined local variable or method `list' for an instance of #<Class:0x00007f7c6789c3b8>):
+    6: 
+    7: <p><%= @list.body %></p>
+    8: 
+    9: <%= link_to "編集", edit_list_path(list.id) %>
+  
+app/views/lists/show.html.erb:9
+
+Information for cause: NameError (undefined local variable or method `list' for an instance of #<Class:0x00007f7c6789c3b8>):
+  
+app/views/lists/show.html.erb:9
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 06:07:29 +0000
+Processing by ListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.6ms)
+Completed 200 OK in 49ms (Views: 9.3ms | ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 26.1ms)
+
+
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 06:07:31 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/lists/1" for 127.0.0.1 at 2026-04-08 06:07:32 +0000
+Processing by ListsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"test1　ですよ", "body"=>"test1　追記：編集機能を使いました"}, "commit"=>"保存", "id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='update',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:25:in `update'
+Redirected to http://127.0.0.1:8080/lists/1
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/1" for 127.0.0.1 at 2026-04-08 06:07:32 +0000
+Processing by ListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  Rendered lists/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 2.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/lists/1/edit" for 127.0.0.1 at 2026-04-08 06:07:33 +0000
+Processing by ListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 1 LIMIT 1 /*action='edit',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/edit.html.erb within layouts/application
+  Rendered lists/edit.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
