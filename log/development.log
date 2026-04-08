@@ -1043,3 +1043,382 @@ Processing by ListsController#edit as HTML
 Completed 200 OK in 12ms (Views: 2.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Migrating to CreateActiveStorageTables (20260408061505)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='SampleApp'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "service_name" varchar NOT NULL, "byte_size" bigint NOT NULL, "checksum" varchar, "created_at" datetime(6) NOT NULL) /*application='SampleApp'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key") /*application='SampleApp'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='SampleApp'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id") /*application='SampleApp'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id") /*application='SampleApp'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "active_storage_variant_records" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "blob_id" bigint NOT NULL, "variation_digest" varchar NOT NULL, CONSTRAINT "fk_rails_993965df05"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+) /*application='SampleApp'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_variant_records_uniqueness" ON "active_storage_variant_records" ("blob_id", "variation_digest") /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260408061505') RETURNING "version" /*application='SampleApp'*/[0m
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='SampleApp'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Started GET "/" for 127.0.0.1 at 2026-04-08 06:33:25 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='SampleApp'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ubuntu/.rbenv/versions/3.3.6/lib/ruby/gems/3.3.0/gems/railties-8.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 3.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-08 06:33:40 +0000
+  
+SyntaxError (/home/ubuntu/environment/sample_app/app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+...e(:list).permit(:title, :body :image)
+...                              ^
+):
+  
+app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:33:43 +0000
+  
+SyntaxError (/home/ubuntu/environment/sample_app/app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+...e(:list).permit(:title, :body :image)
+...                              ^
+):
+  
+app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:40:43 +0000
+  
+SyntaxError (/home/ubuntu/environment/sample_app/app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+...e(:list).permit(:title, :body :image)
+...                              ^
+):
+  
+app/controllers/lists_controller.rb:32: syntax error, unexpected ':', expecting ')'
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:42:15 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 3.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id}" %>
+  </span>
+  <p>画像</p>
+  <% if list.image.attached? %>
+  <%= image_tag list.image,size: "200×200" %>
+  <% else %>
+    <%= image_tag "no_image.jpg", size: "200×200"　%>
+  <% end %>
+
+
+
+  <% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...list.title, list_path{list.id}" ); @output_buffer.safe_appen...
+...                              ^
+/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:20: unterminated string meets end of file
+          end
+             ^
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id}" %>
+  </span>
+  <p>画像</p>
+  <% if list.image.attached? %>
+  <%= image_tag list.image,size: "200×200" %>
+  <% else %>
+    <%= image_tag "no_image.jpg", size: "200×200"　%>
+  <% end %>
+
+
+
+  <% end %>
+
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <% @lists.each do |list| %>
+4:    
+5:      <p>タイトル</p>
+6:      <span>
+7:        <%= link_to list.title, list_path{list.id}" %>
+8:      </span>
+9:      <p>画像</p>
+10:      <% if list.image.attached? %>
+11:      <%= image_tag list.image,size: "200×200" %>
+12:      <% else %>
+13:        <%= image_tag "no_image.jpg", size: "200×200"　%>
+14:      <% end %>
+15:    
+16:    
+17:    
+18:      <% end %>
+  
+app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/lists/index.html.erb:20: unterminated string meets end of file
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+...list.title, list_path{list.id}" ); @output_buffer.safe_appen...
+...                              ^
+/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:20: unterminated string meets end of file
+          end
+             ^
+):
+  
+app/views/lists/index.html.erb:7: syntax error, unexpected string literal, expecting ')'
+app/views/lists/index.html.erb:20: unterminated string meets end of file
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:44:03 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  Rendered lists/index.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id} %>
+  </span>
+  <p>画像</p>
+  <% if list.image.attached? %>
+  <%= image_tag list.image,size: "200×200" %>
+  <% else %>
+    <%= image_tag "no_image.jpg", size: "200×200"　%>
+  <% end %>
+
+
+
+  <% end %>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+...image.jpg", size: "200×200"　); @output_buffer.safe_append...
+...                            ^~~
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>投稿一覧</h1>
+
+<% @lists.each do |list| %>
+
+  <p>タイトル</p>
+  <span>
+    <%= link_to list.title, list_path{list.id} %>
+  </span>
+  <p>画像</p>
+  <% if list.image.attached? %>
+  <%= image_tag list.image,size: "200×200" %>
+  <% else %>
+    <%= image_tag "no_image.jpg", size: "200×200"　%>
+  <% end %>
+
+
+
+  <% end %>
+
+):
+1:    <h1>投稿一覧</h1>
+2:    
+3:    <% @lists.each do |list| %>
+4:    
+5:      <p>タイトル</p>
+6:      <span>
+7:        <%= link_to list.title, list_path{list.id} %>
+8:      </span>
+9:      <p>画像</p>
+10:      <% if list.image.attached? %>
+11:      <%= image_tag list.image,size: "200×200" %>
+12:      <% else %>
+13:        <%= image_tag "no_image.jpg", size: "200×200"　%>
+14:      <% end %>
+15:    
+16:    
+17:    
+18:      <% end %>
+  
+app/views/lists/index.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/ubuntu/environment/sample_app/app/views/lists/index.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+...image.jpg", size: "200×200"　); @output_buffer.safe_append...
+...                            ^~~
+):
+  
+app/views/lists/index.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:45:05 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id])
+Caused by: ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id])
+
+Information for: ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id]):
+    4: 
+    5:   <p>タイトル</p>
+    6:   <span>
+    7:     <%= link_to list.title, list_path{list.id} %>
+    8:   </span>
+    9:   <p>画像</p>
+   10:   <% if list.image.attached? %>
+  
+app/views/lists/index.html.erb:7
+app/views/lists/index.html.erb:3
+
+Information for cause: ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id]):
+  
+app/views/lists/index.html.erb:7
+app/views/lists/index.html.erb:3
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:46:00 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  Rendered lists/index.html.erb within layouts/application (Duration: 6.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id])
+Caused by: ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id])
+
+Information for: ActionView::Template::Error (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id]):
+    4: 
+    5:   <p>タイトル</p>
+    6:   <span>
+    7:     <%=link_to list.title, list_path{list.id} %>
+    8:   </span>
+    9:   <p>画像</p>
+   10:   <% if list.image.attached? %>
+  
+app/views/lists/index.html.erb:7
+app/views/lists/index.html.erb:3
+
+Information for cause: ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"lists"}, missing required keys: [:id]):
+  
+app/views/lists/index.html.erb:7
+app/views/lists/index.html.erb:3
+Started GET "/lists" for 127.0.0.1 at 2026-04-08 06:47:59 +0000
+Processing by ListsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/index.html.erb within layouts/application
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT "lists".* FROM "lists" /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 1 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 2 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 3 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/index.html.erb:10
+  Rendered lists/index.html.erb within layouts/application (Duration: 43.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | GC: 0.0ms)
+Completed 200 OK in 66ms (Views: 52.0ms | ActiveRecord: 2.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/lists/new" for 127.0.0.1 at 2026-04-08 06:50:53 +0000
+Processing by ListsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering lists/new.html.erb within layouts/application
+  Rendered lists/new.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.2ms)
+Completed 200 OK in 26ms (Views: 9.6ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/lists" for 127.0.0.1 at 2026-04-08 06:51:38 +0000
+Processing by ListsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "list"=>{"title"=>"Active Storage テスト", "body"=>"画像投稿機能の実装", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007d88b44dc8c0 @tempfile=#<Tempfile:/tmp/RackMultipart20260408-222801-gb6cad.png>, @content_type="image/png", @original_filename="142_refileDownloadImage.png", @headers="Content-Disposition: form-data; name=\"list[image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"投稿"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Create (1.4ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES ('Active Storage テスト', '画像投稿機能の実装', '2026-04-08 06:51:38.933934', '2026-04-08 06:51:38.933934') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES ('eg8iirw5k6d2yjwjrhjplccyky1b', '142_refileDownloadImage.png', 'image/png', '{"identified":true}', 'local', 12302, 'PBcUb2h4tdaiKpde00c2NQ==', '2026-04-08 06:51:38.969079') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ('image', 'List', 4, 1, '2026-04-08 06:51:38.971334') RETURNING "id" /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mList Update (0.8ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = '2026-04-08 06:51:38.981680' WHERE "lists"."id" = 4 /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:8:in `create'
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: eg8iirw5k6d2yjwjrhjplccyky1b (checksum: PBcUb2h4tdaiKpde00c2NQ==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: ebc698f4-9dec-471d-ba7a-f326c3ad734a) to Async(default) with arguments: #<GlobalID:0x00007d88b4b5c6f0 @uri=#<URI::GID gid://sample-app/ActiveStorage::Blob/1>>
+[ActiveJob] ↳ app/controllers/lists_controller.rb:8:in `create'
+Redirected to http://127.0.0.1:8080/lists/4
+Completed 302 Found in 143ms (ActiveRecord: 8.3ms (6 queries, 0 cached) | GC: 12.3ms)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*application='SampleApp'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a] Performing ActiveStorage::AnalyzeJob (Job ID: ebc698f4-9dec-471d-ba7a-f326c3ad734a) from Async(default) enqueued at 2026-04-08T06:51:39.026176877Z with arguments: #<GlobalID:0x00007d88b4bb68a8 @uri=#<URI::GID gid://sample-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mActiveStorage::Blob Update (1.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = '{"identified":true,"analyzed":true}' WHERE "active_storage_blobs"."id" = 1 /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = 1 /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 4 /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mList Update (0.1ms)[0m  [1m[33mUPDATE "lists" SET "updated_at" = '2026-04-08 06:51:39.136626' WHERE "lists"."id" = 4 /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='SampleApp',job='ActiveStorage%3A%3AAnalyzeJob'*/[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [ebc698f4-9dec-471d-ba7a-f326c3ad734a] Performed ActiveStorage::AnalyzeJob (Job ID: ebc698f4-9dec-471d-ba7a-f326c3ad734a) from Async(default) in 107.45ms
+Started GET "/lists/4" for 127.0.0.1 at 2026-04-08 06:51:39 +0000
+Processing by ListsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mList Load (0.1ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = 4 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/controllers/lists_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering lists/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 4 AND "active_storage_attachments"."record_type" = 'List' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='lists'*/[0m
+  ↳ app/views/lists/show.html.erb:10
+  Rendered lists/show.html.erb within layouts/application (Duration: 10.0ms | GC: 2.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | GC: 2.6ms)
+Completed 200 OK in 22ms (Views: 11.3ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 2.6ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 06:51:39 +0000
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--86caafe618a6231de9c22d771004374b2eba3c4e", "filename"=>"142_refileDownloadImage"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 1 LIMIT 1 /*action='show',application='SampleApp',controller='redirect'*/[0m
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: eg8iirw5k6d2yjwjrhjplccyky1b (http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNjo1NjozOS4yNDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--7758edcbdd76e6427b2b41b3007a701f7aea2b48/142_refileDownloadImage.png)[0m
+Redirected to http://127.0.0.1:8080/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNjo1NjozOS4yNDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--7758edcbdd76e6427b2b41b3007a701f7aea2b48/142_refileDownloadImage.png
+Completed 302 Found in 14ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJlZzhpaXJ3NWs2ZDJ5andqcmhqcGxjY3lreTFiIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcnMTQyX3JlZmlsZURvd25sb2FkSW1hZ2UucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvcG5nIiwic2VydmljZV9uYW1lIjoibG9jYWwifSwiZXhwIjoiMjAyNi0wNC0wOFQwNjo1NjozOS4yNDdaIiwicHVyIjoiYmxvYl9rZXkifX0=--7758edcbdd76e6427b2b41b3007a701f7aea2b48/142_refileDownloadImage.png" for 127.0.0.1 at 2026-04-08 06:51:39 +0000
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"142_refileDownloadImage"}
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
